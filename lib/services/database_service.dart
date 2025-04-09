@@ -16,6 +16,19 @@ class DatabaseService {
     return _database!;
   }
 
+  // Fonction pour créer explicitement la base de données
+  Future<void> createDatabase() async {
+    final db = await database;  // S'assure que la base de données est ouverte
+    // Appel à _onCreate si la table est vide
+    final tables = await db.rawQuery("SELECT name FROM sqlite_master WHERE type='table' AND name='allergies';");
+    if (tables.isEmpty) {
+      await _onCreate(db, 1);  // Crée la table si elle n'existe pas
+      print("Base de données et table 'allergies' créées !");
+    } else {
+      print("La base de données existe déjà.");
+    }
+  }
+
   Future<Database> _initDatabase() async {
     final databasePath = await getDatabasesPath();
     final path = join(databasePath, 'allergies.db');

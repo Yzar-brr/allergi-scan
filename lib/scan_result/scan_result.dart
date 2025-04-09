@@ -1,8 +1,8 @@
-import 'package:allergi_scan/models/allergy.dart';
-import 'package:allergi_scan/scan_result/button_return.dart';
-import 'package:allergi_scan/scan_result/header_result.dart';
-import 'package:allergi_scan/scan_result/result_tile.dart';
-import 'package:allergi_scan/services/openfoodfact_service.dart';
+import 'package:alergiscan/models/allergy.dart';
+import 'package:alergiscan/scan_result/button_return.dart';
+import 'package:alergiscan/scan_result/header_result.dart';
+import 'package:alergiscan/scan_result/result_tile.dart';
+import 'package:alergiscan/services/openfoodfact_service.dart';
 import 'package:flutter/material.dart';
 import '../services/database_service.dart';
 
@@ -63,12 +63,12 @@ class _ScanResultState extends State<ScanResult> {
             final List<Allergy> allergies = snapshot.data![1] as List<Allergy>;
             final String productName = jsonData['product_name_fr'];
             final String imgURL = jsonData['image_front_url'];
-            final additives = jsonData['additives_original_tags'];
+            final additives = jsonData['additives_original_tags'] ?? [];
             List<String> additivesString = [];
             if (additives is List<dynamic>) {
               additivesString = additives.cast<String>();
             }
-            final allergens = jsonData['allergens_tags'];
+            final allergens = jsonData['allergens_tags'] ?? [];
             List<String> allergensString = [];
             if (allergens is List<dynamic>) {
               allergensString = allergens.cast<String>();
@@ -79,8 +79,7 @@ class _ScanResultState extends State<ScanResult> {
             final dissociatedAllergenes =
                 dissociateAllergens(allergensString, allergies);
 
-            final bool foundAllergies =
-                additivesString[0].length + allergensString[0].length > 0;
+            final bool foundAllergies = additivesString.isNotEmpty || allergensString.isNotEmpty;
 
             return Scaffold(
                 backgroundColor: foundAllergies

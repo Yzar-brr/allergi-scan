@@ -1,4 +1,4 @@
-import 'package:allergi_scan/home/home.dart';
+import 'package:alergiscan/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

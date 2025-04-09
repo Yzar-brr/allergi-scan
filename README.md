@@ -1,6 +1,6 @@
-# allergi_scan
+# alergiscan
 
-Assistant allergies
+A new Flutter project.
 
 ## Getting Started
 

@@ -1,5 +1,5 @@
-import 'package:allergi_scan/scan_result/button_return.dart';
-import 'package:allergi_scan/scan_result/scan_result.dart';
+import 'package:alergiscan/scan_result/button_return.dart';
+import 'package:alergiscan/scan_result/scan_result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zxing/flutter_zxing.dart';
 

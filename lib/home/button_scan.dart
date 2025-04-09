@@ -1,4 +1,4 @@
-import 'package:allergi_scan/barcode_scanner/barcode_scanner.dart';
+import 'package:alergiscan/barcode_scanner/barcode_scanner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

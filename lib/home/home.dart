@@ -1,6 +1,6 @@
-import 'package:allergi_scan/home/allergies.dart';
-import 'package:allergi_scan/home/button_scan.dart';
-import 'package:allergi_scan/home/header.dart';
+import 'package:alergiscan/home/allergies.dart';
+import 'package:alergiscan/home/button_scan.dart';
+import 'package:alergiscan/home/header.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {

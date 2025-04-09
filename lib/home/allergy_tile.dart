@@ -1,6 +1,7 @@
-import 'package:allergi_scan/models/allergy.dart';
+import 'package:alergiscan/models/allergy.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
+
 
 class AllergyTile extends StatelessWidget {
   final Allergy allergy;

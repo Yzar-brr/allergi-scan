@@ -1,5 +1,6 @@
-import 'package:allergi_scan/home/allergy_tile.dart';
-import 'package:allergi_scan/models/allergy.dart';
+import 'package:alergiscan/home/allergies.dart';
+import 'package:alergiscan/models/allergy.dart';
+import 'package:alergiscan/home/allergy_tile.dart';
 import 'package:flutter/material.dart';
 import '../services/database_service.dart';
 
